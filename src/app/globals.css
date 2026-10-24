@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jakarta: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-dmserif: "DM Serif Display", Georgia, serif;
+}
+
+@layer base {
+  * {
+    border-color: #E2E8F0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F8FAFC;
+    color: #0F2A30;
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #006675;
+    font-weight: 700;
+  }
+}
+
+/* Custom UI Utility classes following 04_UI_UX_DESIGN.md */
+.font-display {
+  font-family: var(--font-dmserif), Georgia, serif;
+}
+
+/* Subtle decorative wave gradient pattern */
+.bg-wave-gradient {
+  background: linear-gradient(135deg, rgba(235, 90, 17, 0.08) 0%, rgba(255, 157, 45, 0.06) 35%, rgba(77, 194, 194, 0.06) 70%, rgba(0, 102, 117, 0.09) 100%);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

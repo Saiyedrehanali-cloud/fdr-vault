@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#004d51","surface":"#f3faff","surface-dim":"#c4deec","primary-fixed":"#a4eeff","error-container":"#ffdad6","tertiary-fixed":"#86f3fb","on-error-container":"#93000a","surface-container-highest":"#cce7f4","tertiary-container":"#00676c","surface-bright":"#f3faff","surface-tint":"#056877","outline-variant":"#bec8cb","primary-container":"#006675","secondary-container":"#fc6620","surface-container-low":"#e6f6ff","on-surface-variant":"#3f484b","on-primary-fixed-variant":"#004e5a","secondary-fixed-dim":"#ffb599","surface-container-lowest":"#ffffff","on-error":"#ffffff","background":"#f3faff","on-background":"#031e28","on-tertiary":"#ffffff","on-tertiary-fixed":"#002022","surface-container":"#d9f2ff","secondary":"#a73a00","surface-container-high":"#d2ecfa","on-primary-container":"#96e1f2","primary-fixed-dim":"#87d2e3","inverse-on-surface":"#dff4ff","inverse-primary":"#87d2e3","on-surface":"#031e28","on-tertiary-container":"#78e6ed","surface-variant":"#cce7f4","on-secondary-fixed-variant":"#7f2b00","on-secondary-fixed":"#370e00","on-tertiary-fixed-variant":"#004f53","tertiary-fixed-dim":"#68d7de","error":"#ba1a1a","on-primary-fixed":"#001f25","on-primary":"#ffffff","outline":"#6f797b","primary":"#004c58","inverse-surface":"#1a343e","on-secondary-container":"#571a00","on-secondary":"#ffffff","secondary-fixed":"#ffdbce"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-lg":"2rem",gutter:"1.5rem",space-md":"1rem","space-lg":"1.5rem","space-xl":"2rem",margin:"2rem","margin-mobile":"1rem","space-sm":"0.75rem","margin-desktop":"2.5rem","gutter-sm":"1rem","space-xs":"0.5rem"},fontFamily:{"label-sm":["Plus Jakarta Sans"],"currency-stat":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-hero":["DM Serif Display"],"display-hero-mobile":["DM Serif Display"],"label-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"currency-stat":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[4px_0_24px_-4px_rgba(0,102,117,0.18)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center justify-between border-b border-white/10"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-primary-fixed shadow-inner"><span class="font-headline-sm text-headline-sm font-bold">₹</span></div><div class="flex flex-col"><span class="font-display-hero-mobile text-headline-sm leading-none text-white tracking-tight">FDR Vault</span><span class="font-label-sm text-[10px] text-primary-fixed-dim uppercase tracking-wider mt-0.5">Governance</span></div></div><span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed text-label-sm font-label-sm font-bold tracking-widest border border-secondary-container/30">AICTE</span></div><nav class="flex-1 px-3 py-space-md space-y-1" data-active-classes="bg-white/15 text-white font-semibold pl-3 border-l-[3px] border-[#FF9D2D] shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="dashboard" href="#"><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="institutions" href="#"><span class="font-label-lg text-label-lg">Institutions</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="all-fdrs" href="#"><span class="font-label-lg text-label-lg">All FDRs</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="verification" href="#"><span class="font-label-lg text-label-lg">Verification</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-white font-label-sm text-[11px] font-bold shadow-sm">9</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="fdr-detail-and-verification" href="#"><span class="font-label-lg text-label-lg pl-3 text-[13px] border-l border-white/20">FDR Detail &amp; Verification</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="release-requests" href="#"><span class="font-label-lg text-label-lg">Release Requests</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="alerts" href="#"><span class="font-label-lg text-label-lg">Alerts</span><span class="w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-primary-container"></span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="reports" href="#"><span class="font-label-lg text-label-lg">Reports</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="audit-trail" href="#"><span class="font-label-lg text-label-lg">Audit Trail</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="settings" href="#"><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="relative overflow-hidden p-space-md border-t border-white/10 bg-gradient-to-t from-tertiary-container to-transparent"><div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-secondary-container/20 blur-xl pointer-events-none"></div><div class="relative flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>v2.4 Production Node</span><span class="material-symbols-outlined text-[16px] text-white/50">dns</span></div></div></aside><div class="pl-[280px]"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 px-space-xl flex items-center justify-between gap-gutter"><div class="flex items-center flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface rounded-xl border border-outline-variant/50 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search FDR No., Institute code, Bank..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="px-3 py-1 rounded-full bg-surface-container text-primary-container border border-surface-variant font-label-md text-label-md font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">shield_person</span><span>AICTE Admin</span></div><div class="flex items-center gap-3 pl-2"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-fixed ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Dr. S. K. Murthy</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-none">Director of Finance</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface p-space-xl"><div class="flex flex-col w-full max-w-[1600px] mx-auto pb-space-xl">
+<!-- Top Navigation Context & Actions -->
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<!-- Breadcrumb & Micro Status -->
+<div class="flex items-center justify-between">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span>Portal</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>Security Deposits</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary-container font-semibold">Verification Queue</span>
+</nav>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span>CBS Real-Time Engine Active</span>
+</div>
+</div>
+<!-- Header Content & Right Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-1">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">FDR Verification &amp; Scrutiny Queue</h1>
+<span class="px-3 py-1 rounded-full bg-secondary-container/15 text-secondary font-label-md text-label-md font-bold">12 Total in Queue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+          Statutory verification workflow for Fixed Deposit Receipts lodged under AICTE Approval Process Handbook (APH) compliance.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">filter_alt</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-lowest rounded-xl text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container/20 shadow-sm" placeholder="Filter queue by ID or Inst..." type="text"/>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-container">swap_vert</span>
+<span>Sort: Oldest Lodgment First</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-lowest text-primary-container font-label-md text-label-md shadow-sm hover:bg-primary-container hover:text-on-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Batch Assign</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Filter Chips Row -->
+<div class="flex flex-wrap items-center gap-2.5 mb-space-lg">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">all_inbox</span>
+<span>All Verifications (12)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-sm transition-colors" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FF9D2D]"></span>
+<span>Pending Scrutiny (9)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-sm transition-colors" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-[#00959C]"></span>
+<span>Under Active Review (3)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-sm transition-colors" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EB5A11]"></span>
+<span>Discrepancy Flagged (6)</span>
+</button>
+<div class="ml-auto flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">sync</span>
+<span>Synced: Just now (Auto-refresh 30s)</span>
+</div>
+</div>
+<!-- SLA Ageing & Health Monitor Strip -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm mb-space-xl flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Visual Progress/Ageing Metrics -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#00959C] text-white text-[10px] font-bold">3</span>
+<span class="font-semibold">&lt; 2 Days:</span>
+<span class="text-on-surface-variant">On Track</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-low text-on-secondary-fixed-variant font-label-md text-label-md">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#FF9D2D] text-white text-[10px] font-bold">5</span>
+<span class="font-semibold">2–5 Days:</span>
+<span class="text-on-surface-variant">Due Soon</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-error-container text-on-error-container font-label-md text-label-md">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#EB5A11] text-white text-[10px] font-bold">4</span>
+<span class="font-semibold">&gt; 5 Days:</span>
+<span>SLA Overdue / Escalated</span>
+</div>
+</div>
+<!-- Right KPI telemetry -->
+<div class="flex flex-wrap items-center gap-space-lg text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">timer</span>
+<span>Statutory SLA: <strong class="text-on-surface font-semibold">5 Business Days</strong></span>
+</div>
+<div class="hidden md:block w-px h-5 bg-outline-variant/40"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">speed</span>
+<span>Avg Scrutiny Cycle: <strong class="text-on-surface font-semibold">3.2 Days</strong></span>
+</div>
+<div class="hidden md:block w-px h-5 bg-outline-variant/40"></div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/15 text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>1 Critical Escalation</span>
+</div>
+</div>
+</div>
+<!-- Review Cards Queue (Chronological Oldest to Newest) -->
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: 6 Days Overdue - Breached -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<!-- Top 4px Structural colored accent -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#EB5A11]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Instrument & Institution Identity -->
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2019-3810</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Self-Financing</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EB5A11]/15 text-[#EB5A11] font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EB5A11]"></span>
+              6 Days Overdue · SLA Breached
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+              2 Advisory Flags
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">RV College of Engineering, Bengaluru</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-1092834</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> Canara Bank · Mysore Rd Br (CNRB0000192)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 6 business days ago · 08 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Tenor Lock-in Extension for B.Tech CS Intake</span>
+</div>
+<!-- Advisory Flag Chips Box -->
+<div class="mt-2 p-2.5 rounded-xl bg-error-container/40 flex flex-wrap items-center gap-2 text-on-error-container font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-[#EB5A11]">report</span>
+<span class="font-semibold">Detected Discrepancies:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-[#EB5A11] font-label-sm text-label-sm">CBS Mandate drift in lock-in validity</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-[#EB5A11] font-label-sm text-label-sm">Unverified branch seal on scan</span>
+</div>
+</div>
+<!-- Right Principal & Action Cluster -->
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 35,00,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lien marked to Member Secy AICTE</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-secondary font-semibold">Unassigned</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-[#EB5A11] hover:bg-[#D44F0D] text-white font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Review &amp; Scrutinize</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: 5.5 Days Overdue - Critical Flags -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#EB5A11]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2021-9941</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Government Aided</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EB5A11]/15 text-[#EB5A11] font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EB5A11]"></span>
+              5.5 Days Overdue · SLA Breached
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-[#EB5A11] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">error</span>
+              3 Critical Flags
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Veermata Jijabai Technological Institute (VJTI)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-4039182</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> State Bank of India · Matunga Br (SBIN0001107)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 5.5 business days ago · 09 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> New PG Diploma in Artificial Intelligence</span>
+</div>
+<div class="mt-2 p-2.5 rounded-xl bg-error-container/40 flex flex-wrap items-center gap-2 text-on-error-container font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-[#EB5A11]">crisis_alert</span>
+<span class="font-semibold text-[#EB5A11]">Urgent Attention Required:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-error-container font-label-sm text-label-sm font-bold">CBS balance variance of -₹15,00,000</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-error-container font-label-sm text-label-sm">Depository Branch Code IFSC mismatch</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 50,00,000</span>
+<span class="block font-label-sm text-label-sm text-error font-medium mt-0.5">CBS Ledger reads: ₹ 35,00,000</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-primary-container font-semibold">Dr. S. K. Murthy</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Continue Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: 4 Days Pending - Action Due -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#FF9D2D]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2023-1102</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">University Department</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FF9D2D]/15 text-[#945100] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF9D2D]"></span>
+              4 Days Pending · Action Due
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-[#FF9D2D]">info</span>
+              1 Advisory Flag
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Thapar Institute of Engineering &amp; Technology</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-8930129</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> Punjab National Bank · Patiala Central (PUNB0029300)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 4 business days ago · 10 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Renewal for 8-Year Standing Deposit Compliance</span>
+</div>
+<div class="mt-2 p-2.5 rounded-xl bg-surface-container-low flex flex-wrap items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-[#FF9D2D]">pending_actions</span>
+<span class="font-semibold text-on-surface">Advisory Notice:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">Pending BM Joint Lien certificate annexure upload</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 25,00,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Term: 10 Years Fixed Auto-Roll</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-on-surface font-semibold">P. V. Sharma</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+<span>Review Deposit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: 3 Days Pending - In Review -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#FF9D2D]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2024-5582</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Self-Financing</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FF9D2D]/15 text-[#945100] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF9D2D]"></span>
+              3 Days Pending · In Review
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-[#00959C]">check_circle</span>
+              0 Flags · CBS Match 100%
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">PSG College of Technology, Coimbatore</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-5231908</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> Indian Bank · Peelamedu (IDIB000P044)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 3 business days ago · 11 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Additional Intake in Mechatronics Engineering</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 40,00,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Depository Status: Confirmed</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-primary-container font-semibold">Dr. S. K. Murthy</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5: 2.5 Days Pending -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#FF9D2D]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2024-7119</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Self-Financing</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FF9D2D]/15 text-[#945100] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF9D2D]"></span>
+              2.5 Days Pending
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-[#FF9D2D]">info</span>
+              1 Advisory Flag
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Manipal Institute of Technology (MIT), Manipal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-3849102</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> ICICI Bank · Udupi-Manipal Branch (ICIC0000185)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 2.5 business days ago · 11 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Establishment of New Autonomous Campus Unit</span>
+</div>
+<div class="mt-2 p-2 rounded-xl bg-surface-container-low flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-[#FF9D2D]">help</span>
+<span class="font-medium">Advisory:</span>
+<span>Joint Lien phrasing minor discrepancy in indemnity clause letterhead</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 1,00,00,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">High Value Instrument (Tier 1)</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-secondary font-semibold">Unassigned</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Assign &amp; Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6: 1.5 Days Pending - Optimal -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#00959C]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2025-0214</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Government Aided</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00959C]/15 text-[#006675] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00959C]"></span>
+              1.5 Days Pending · Optimal
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-[#00959C]">document_scanner</span>
+              0 Flags · OCR 99.8% Match
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">College of Engineering, Pune (COEP Tech Univ)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-1209384</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> Bank of Maharashtra · Shivaji Nagar (MAHB0000004)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: 1.5 business days ago · 12 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Renewal of Security Deposit under APH Chapter 2</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 30,00,000</span>
+<span class="block font-label-sm text-label-sm text-primary font-medium mt-0.5">Auto-lien verified via SFMS</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-secondary font-semibold">Unassigned</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Quick Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 7: 18 Hours Ago - Fresh Lodgment -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#00959C]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-2 flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-currency-stat text-[13px] font-bold text-primary tracking-wide">FDR-2025-0301</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">University Department</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00959C]/15 text-[#006675] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00959C]"></span>
+              18 Hours Ago · Fresh Lodgment
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-[#00959C]">sync_saved_locally</span>
+              0 Flags · CBS Live Synced
+            </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Jadavpur University, Faculty of Engg &amp; Tech</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>AICTE ID: 1-2849201</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary-container font-medium"><span class="material-symbols-outlined text-[14px]">account_balance</span> State Bank of India · Jadavpur University Br (SBIN0000093)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">history</span> Submitted: Yesterday at 16:45 IST · 14 Apr 2025</span>
+<span class="text-outline/40">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">assignment</span> Program Conversion from Diploma to Degree (Mech Engg)</span>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between gap-space-md lg:pl-space-lg lg:border-l lg:border-outline-variant/30 min-w-[240px]">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Principal Lodgment</span>
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 35,00,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Digital Certificate Attached</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+              Reviewer: <strong class="text-secondary font-semibold">Unassigned</strong>
+</span>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+<span>Assign &amp; Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Pagination & Statutory Compliance Note -->
+<div class="mt-space-xl flex flex-col gap-space-md">
+<!-- Pagination Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest rounded-2xl px-space-lg py-3.5 shadow-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing <strong class="text-on-surface font-semibold">1–7</strong> of <strong class="text-on-surface font-semibold">12</strong> pending instruments
+      </span>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-outline hover:text-on-surface font-label-md text-label-md disabled:opacity-40 transition-colors" disabled="" type="button">
+          Previous
+        </button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold flex items-center justify-center shadow-sm" type="button">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
+          2
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary-container hover:bg-surface-variant font-label-md text-label-md transition-colors" type="button">
+          Next
+        </button>
+</div>
+</div>
+<!-- AICTE APH Mandate Note -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex items-start gap-3.5">
+<span class="material-symbols-outlined text-primary-container text-[22px] mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-lg text-label-lg text-primary-container font-semibold">AICTE APH Clause 4.2 Mandate Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          All statutory security FDR lodgments must undergo primary depository verification and CBS ledger lien validation within 5 business days of lodgment. Automated alerts escalate unverified instruments past 7 days to the Member Secretary Cell and the Regional Officer in charge.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic queue interaction micro-handlers
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.textContent.includes('Assign') || this.textContent.includes('Review')) {
+        // Visual feedback on click
+        this.classList.add('scale-[0.98]');
+        setTimeout(() => this.classList.remove('scale-[0.98]'), 150);
+      }
+    });
+  });
+</script></main></div></body></html>

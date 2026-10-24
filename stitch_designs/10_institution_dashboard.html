@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f3faff","error":"#ba1a1a","error-container":"#ffdad6","inverse-primary":"#87d2e3","primary":"#004c58","surface-tint":"#056877","primary-fixed":"#a4eeff","tertiary-container":"#00676c","tertiary-fixed-dim":"#68d7de","on-primary-fixed-variant":"#004e5a","outline":"#6f797b","secondary-container":"#fc6620","surface-container-low":"#e6f6ff","on-secondary-fixed":"#370e00","on-surface-variant":"#3f484b","on-tertiary":"#ffffff","on-secondary":"#ffffff","secondary-fixed":"#ffdbce","secondary-fixed-dim":"#ffb599","surface-variant":"#cce7f4","on-surface":"#031e28","surface-container-high":"#d2ecfa","surface-container-highest":"#cce7f4","outline-variant":"#bec8cb","on-primary":"#ffffff","on-primary-container":"#96e1f2","on-secondary-fixed-variant":"#7f2b00","on-tertiary-container":"#78e6ed","on-tertiary-fixed-variant":"#004f53","on-error":"#ffffff","on-error-container":"#93000a","secondary":"#a73a00","tertiary":"#004d51","on-primary-fixed":"#001f25","inverse-surface":"#1a343e","inverse-on-surface":"#dff4ff","surface-dim":"#c4deec","on-secondary-container":"#571a00","surface-bright":"#f3faff","on-tertiary-fixed":"#002022","on-background":"#031e28","tertiary-fixed":"#86f3fb","primary-fixed-dim":"#87d2e3","background":"#f3faff","surface-container-lowest":"#ffffff","primary-container":"#006675","surface-container":"#d9f2ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","space-sm":"0.75rem","space-lg":"1.5rem","margin":"2rem","margin-mobile":"1rem","gutter-lg":"2rem","space-xl":"2rem","margin-desktop":"2.5rem","gutter":"1.5rem","gutter-sm":"1rem","space-xs":"0.5rem"},fontFamily:{"display-hero":["DM Serif Display"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"currency-stat":["Plus Jakarta Sans"],"display-hero-mobile":["DM Serif Display"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"currency-stat":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-primary-container z-50 flex flex-col justify-between py-6 px-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><div class="w-10 h-10 rounded-xl bg-tertiary-container flex items-center justify-center text-on-tertiary shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[24px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight font-bold">FDR Vault</span><span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Sovereign Node</span></div></div><nav class="flex flex-col gap-1.5 pt-2" data-active-classes="bg-surface/10 text-on-primary font-label-lg border-l-4 border-secondary-container rounded-r-xl"><a aria-current="page" class="flex items-center justify-between px-3.5 py-3 transition-all bg-surface/10 text-on-primary font-label-lg border-l-4 border-secondary-container rounded-r-xl" data-path="dashboard" href="#"><div class="flex items-center gap-3.5"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-3.5 py-3 rounded-lg text-on-primary/80 hover:bg-surface/5 hover:text-on-primary transition-all font-label-lg text-label-lg" data-path="my-fdrs" href="#"><div class="flex items-center gap-3.5"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>My FDRs</span></div></a><a class="flex items-center justify-between px-3.5 py-3 rounded-lg text-on-primary/80 hover:bg-surface/5 hover:text-on-primary transition-all font-label-lg text-label-lg" data-path="release-refund" href="#"><div class="flex items-center gap-3.5"><span class="material-symbols-outlined text-[20px]">currency_exchange</span><span>Release / Refund</span></div></a><a class="flex items-center justify-between px-3.5 py-3 rounded-lg text-on-primary/80 hover:bg-surface/5 hover:text-on-primary transition-all font-label-lg text-label-lg" data-path="alerts" href="#"><div class="flex items-center gap-3.5"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span>Alerts</span></div><span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">2</span></a></nav></div><div class="flex flex-col gap-3 px-3 pt-4 border-t border-surface/10"><a class="flex items-center gap-3 text-on-primary/70 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="helpdesk-and-guidelines" href="#"><span class="material-symbols-outlined text-[18px]">help_center</span><span>Helpdesk &amp; AICTE Guides</span></a><div class="flex items-center justify-between text-on-primary/50 font-label-sm text-label-sm pt-1"><span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim inline-block"></span>v2.4 Institution Node</span><span class="uppercase tracking-widest text-[9px]">AICTE SECURE</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-gutter-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>AICTE Institutional Portal</span></div><div class="relative w-96"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search FDR number, receipt, status..." type="text"/></div></div><div class="flex items-center gap-5"><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary rounded-full ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2 pr-3 py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Demo Institute of Technology, Bhopal</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">AICTE ID: 1-9482019</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface px-gutter-lg py-space-lg max-w-[1600px] mx-auto"><div class="flex flex-col w-full">
+<!-- Breadcrumbs & Status Bar -->
+<div class="flex items-center justify-between gap-4 pb-4">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary transition-colors cursor-pointer">Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Institution Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Dashboard</span>
+</nav>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+        CBS Core Banking Sync: Active
+      </span>
+<span class="text-outline text-label-sm font-label-sm">AY 2025–26 Cycle</span>
+</div>
+</div>
+<!-- Institutional Hero Header -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-6 sm:p-8 shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-surface-container-high/60 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 -bottom-20 w-64 h-64 rounded-full bg-secondary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            Approved Institution
+          </span>
+<span class="text-outline font-label-sm text-label-sm">·</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+            Lien Registry Synchronized
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Welcome, Demo Institute of Technology, Bhopal
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
+<span>AICTE Permanent Institute ID: <strong class="text-on-surface font-semibold">1-9482019</strong></span>
+<span>·</span>
+<span>Central RO Bhopal</span>
+<span>·</span>
+<span>Affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</span>
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-3 shrink-0">
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-all shadow-sm hover:shadow" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download Deposit Summary</span>
+</button>
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary hover:bg-secondary-container text-on-secondary font-label-lg text-label-lg transition-all shadow-md hover:shadow-lg active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Submit New FDR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric Summary Grid (4 Cards with Sovereign Horizon Top Borders) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
+<!-- Card 1: My FDRs -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between pb-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">My FDRs</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">layers</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Statutory Total
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">5 Active · 3 In Process</p>
+</div>
+</div>
+<!-- Card 2: Expiring Soon -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between pb-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Expiring Soon</span>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">alarm</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-secondary">2</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
+            30-day window
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Within statutory renewal threshold</p>
+</div>
+</div>
+<!-- Card 3: Needs Action -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between pb-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Needs Action</span>
+<div class="w-10 h-10 rounded-xl bg-error-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">priority_high</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-secondary">3</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Immediate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">2 Discrepancies · 1 Renewal Due</p>
+</div>
+</div>
+<!-- Card 4: Total Deposited -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-fixed-dim"></div>
+<div class="flex items-center justify-between pb-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Total Deposited</span>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-on-surface">₹ 2.85 Cr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Statutory Joint Lien Marked in CBS</p>
+</div>
+</div>
+</div>
+<!-- Action Needed Section -->
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Action Needed</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+            3 Requiring Institutional Remediation
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Tasks requiring institutional submission or document remediation under AICTE Approval Process Handbook (APH) regulations.
+        </p>
+</div>
+<button class="self-start sm:self-auto text-primary hover:text-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>View Compliance Guidelines</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-3.5">
+<!-- Item 1: Discrepancy Alert -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-5 relative overflow-hidden pl-6">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-secondary"></div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed/50 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[22px]">error</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Discrepancy: Re-upload FDR copy &amp; Branch Certificate</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase tracking-wider font-bold">Scrutiny Flag</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              FDR Ref: <strong class="text-on-surface">FDR-2023-9014</strong> · Bank of India (MP Nagar Br) · <span class="font-semibold text-on-surface">₹ 35,00,000</span> · CBS report shows branch code mismatch on scanned receipt.
+            </p>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Deadline: 5 business days remaining (Notice dated: 02 May 2025)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end lg:self-center">
+<a class="font-label-md text-label-md text-primary hover:underline px-2 py-1" href="#">View Discrepancy Note</a>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Fix &amp; Re-upload</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Urgency Renewal Alert -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-5 relative overflow-hidden pl-6">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-secondary-container"></div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed-dim/40 flex items-center justify-center shrink-0 text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Renew FDR expiring in 12 days</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">Statutory Expiry</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              FDR Ref: <strong class="text-on-surface">FDR-2020-1842</strong> · State Bank of India · <span class="font-semibold text-on-surface">₹ 50,00,000</span> · Matures on 18 May 2025. Mandatory rollover or renewal guarantee required to prevent intake hold.
+            </p>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mt-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Intake clearance for B.Tech CSE dependent on this rollover</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end lg:self-center">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-2 rounded-lg hover:bg-surface-container transition-colors" type="button">
+            Submit Rollover Bank Letter
+          </button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+<span>Renew FDR</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Warning Lien Signature Alert -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-5 relative overflow-hidden pl-6">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-secondary-fixed"></div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">draw</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Pending Joint Lien Endorsement Signature</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">Endorsement</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              FDR Ref: <strong class="text-on-surface">FDR-2024-5120</strong> · Punjab National Bank · <span class="font-semibold text-on-surface">₹ 25,00,000</span> · AICTE RO Bhopal endorsed copy required for permanent program expansion.
+            </p>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mt-0.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Regional Office signature stamp completed on 04 May 2025</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end lg:self-center">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">signature</span>
+<span>Upload Signed Copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- FDR Status Tracker Section -->
+<div class="mt-10 bg-surface-container-lowest rounded-2xl shadow-sm p-6 sm:p-7 flex flex-col gap-6">
+<!-- Header with Search & Tab Pills -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Active &amp; Submitted FDR Tracker</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Real-time sovereign audit ledger and multi-tier verification lifecycle.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<!-- Tab Pills -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-xs" type="button">
+            All (8)
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+            In Progress (3)
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+            Verified (5)
+          </button>
+</div>
+<!-- Filter Input -->
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-xl bg-surface text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Filter by receipt or ref..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto -mx-6 sm:mx-0">
+<table class="w-full text-left border-collapse min-w-[1000px]">
+<thead>
+<tr class="bg-surface-container/60 text-outline uppercase font-label-sm text-label-sm tracking-wider">
+<th class="py-3 px-4 rounded-l-xl">FDR Ref &amp; Purpose</th>
+<th class="py-3 px-4">Depository Bank &amp; Branch</th>
+<th class="py-3 px-4 text-right">Principal Amount</th>
+<th class="py-3 px-4">Maturity &amp; Validity</th>
+<th class="py-3 px-4 text-center">Verification Progress</th>
+<th class="py-3 px-4 text-right rounded-r-xl">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: FDR-2024-5120 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">FDR-2024-5120</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">New PG Program in AI &amp; DS</span>
+<span class="text-outline text-[10px] tracking-wide mt-0.5">Receipt #BOI-449102-L</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Punjab National Bank</span>
+<span class="text-on-surface-variant text-[12px]">MP Nagar Br, Bhopal</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹ 25,00,000</span>
+<span class="block text-outline text-[11px]">8.10% p.a. Cumulative</span>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">15 Dec 2029</span>
+<span class="inline-flex items-center gap-1 text-primary text-[11px] font-semibold mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  4 yr 7 mo remaining
+                </span>
+</div>
+</td>
+<!-- Stepper Column: Under Review (RO Bhopal) -->
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col items-center">
+<div class="flex items-center w-64 justify-between relative">
+<!-- Connecting Line 1 (Complete) -->
+<div class="absolute left-4 top-3 right-32 h-0.5 bg-tertiary"></div>
+<!-- Connecting Line 2 (Pending) -->
+<div class="absolute left-32 top-3 right-4 h-0.5 bg-surface-container-high"></div>
+<!-- Step 1: Submitted (Done) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold mt-1">Submitted</span>
+</div>
+<!-- Step 2: Under Review (Active/Pulsating) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-lowest ring-2 ring-primary flex items-center justify-center shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-1">RO Scrutiny</span>
+</div>
+<!-- Step 3: Verified (Pending) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container text-outline flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-label-sm text-[10px] text-outline font-medium mt-1">Verified</span>
+</div>
+</div>
+<span class="mt-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-[10px] font-semibold">
+                  RO Bhopal In-Progress
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Download Receipt" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: FDR-2023-9014 (Discrepancy) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-secondary-fixed/5">
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">FDR-2023-9014</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">UG Intake Expansion (Mechanical)</span>
+<span class="text-outline text-[10px] tracking-wide mt-0.5">Receipt #BKID-099231</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Bank of India</span>
+<span class="text-on-surface-variant text-[12px]">MP Nagar Br, Bhopal</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹ 35,00,000</span>
+<span class="block text-outline text-[11px]">7.75% p.a. Cumulative</span>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">22 Aug 2028</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant text-[11px] font-semibold mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  3 yr 3 mo remaining
+                </span>
+</div>
+</td>
+<!-- Stepper Column: Discrepancy Flagged -->
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col items-center">
+<div class="flex items-center w-64 justify-between relative">
+<!-- Connecting Line 1 (Flagged) -->
+<div class="absolute left-4 top-3 right-32 h-0.5 bg-secondary"></div>
+<!-- Connecting Line 2 (Pending) -->
+<div class="absolute left-32 top-3 right-4 h-0.5 bg-surface-container-high"></div>
+<!-- Step 1: Submitted -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold mt-1">Submitted</span>
+</div>
+<!-- Step 2: Discrepancy Flag -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-xs ring-4 ring-secondary/20">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-bold mt-1">Discrepancy</span>
+</div>
+<!-- Step 3: Verified (Pending) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container text-outline flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<span class="font-label-sm text-[10px] text-outline font-medium mt-1">Verified</span>
+</div>
+</div>
+<span class="mt-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">
+                  Branch Code Remediation Required
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold hover:bg-secondary-container transition-all" type="button">
+                  Fix Now
+                </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: FDR-2021-3401 (Fully Verified) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">FDR-2021-3401</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Establishment Security Deposit (Main Campus)</span>
+<span class="text-outline text-[10px] tracking-wide mt-0.5">Receipt #CNRB-881028-Z</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Canara Bank</span>
+<span class="text-on-surface-variant text-[12px]">Arera Colony, Bhopal</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹ 75,00,000</span>
+<span class="block text-outline text-[11px]">8.25% p.a. Cumulative</span>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">10 Oct 2031</span>
+<span class="inline-flex items-center gap-1 text-tertiary text-[11px] font-semibold mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  6 yr 5 mo remaining
+                </span>
+</div>
+</td>
+<!-- Stepper Column: Fully Verified -->
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col items-center">
+<div class="flex items-center w-64 justify-between relative">
+<!-- Connecting Line 1 (Complete) -->
+<div class="absolute left-4 top-3 right-32 h-0.5 bg-tertiary"></div>
+<!-- Connecting Line 2 (Complete) -->
+<div class="absolute left-32 top-3 right-4 h-0.5 bg-tertiary"></div>
+<!-- Step 1: Submitted -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold mt-1">Submitted</span>
+</div>
+<!-- Step 2: Under Review -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold mt-1">Reviewed</span>
+</div>
+<!-- Step 3: Verified -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs ring-4 ring-tertiary/20">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold mt-1">Verified</span>
+</div>
+</div>
+<span class="mt-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">lock</span> Lien Marked in CBS
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Download Joint Lien Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: FDR-2020-1842 (Expiring Soon) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-secondary-fixed/5">
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">FDR-2020-1842</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">UG B.Tech Second Shift Guarantee</span>
+<span class="text-outline text-[10px] tracking-wide mt-0.5">Receipt #SBIN-119283-A</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">State Bank of India</span>
+<span class="text-on-surface-variant text-[12px]">TT Nagar Br, Bhopal</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">₹ 50,00,000</span>
+<span class="block text-outline text-[11px]">7.25% p.a. Cumulative</span>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary">18 May 2025</span>
+<span class="inline-flex items-center gap-1 text-secondary text-[11px] font-bold mt-0.5 animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  12 days remaining
+                </span>
+</div>
+</td>
+<!-- Stepper Column: Verified but Expiring -->
+<td class="py-4 px-4 align-middle">
+<div class="flex flex-col items-center">
+<div class="flex items-center w-64 justify-between relative">
+<!-- Connecting Line 1 (Complete) -->
+<div class="absolute left-4 top-3 right-32 h-0.5 bg-secondary-container"></div>
+<!-- Connecting Line 2 (Complete) -->
+<div class="absolute left-32 top-3 right-4 h-0.5 bg-secondary-container"></div>
+<!-- Step 1: Submitted -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-1">Submitted</span>
+</div>
+<!-- Step 2: Under Review -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-1">Reviewed</span>
+</div>
+<!-- Step 3: Verified -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center shadow-xs ring-4 ring-secondary-container/20">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary-container font-bold mt-1">Expiring</span>
+</div>
+</div>
+<span class="mt-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">
+                  Renewal Lodgment Required
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right align-middle">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary transition-all" type="button">
+                  Renew
+                </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Audit Metadata -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Showing 4 of 8 total registered FDR lodgments</span>
+<span class="text-outline">·</span>
+<span class="text-outline">Total Active Value: ₹ 2,85,00,000</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-semibold transition-colors disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-3 py-1.5 font-bold text-on-surface">Page 1 of 2</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-semibold transition-colors" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Institutional Document Verification Callout / Upload Pod Preview -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-4">
+<div>
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-[16px]">verified</span> Auto-OCR Enabled Lodgment
+          </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">Quick FDR Verification Upload</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xl">
+            Upload renewed FDR fixed deposit receipt or joint lien letter. The AICTE Sovereign OCR node will extract FDR Number, Issuing Branch, Lien Endorsement, and Expiry automatically.
+          </p>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">document_scanner</span>
+</div>
+</div>
+<!-- Upload Drop Zone -->
+<div class="mt-5 p-6 rounded-2xl bg-surface-container-low/50 border-2 border-dashed border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<div class="mt-3">
+<p class="font-label-md text-label-md font-bold text-on-surface">
+            Drop scanned bank receipt here, or <span class="text-secondary hover:underline">browse files</span>
+</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+            PDF, JPG, PNG (Max 10 MB per file) · Digitally signed bank documents supported
+          </p>
+</div>
+</div>
+</div>
+<!-- Quick Help & Institutional Guidelines -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">APH Statutory Rules</h3>
+</div>
+<ul class="flex flex-col gap-2.5 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5 shrink-0">check_circle</span>
+<span>Joint FDRs must be created in the name of <strong>AICTE and Institution President/Secretary</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5 shrink-0">check_circle</span>
+<span>Tenure must be <strong>at least 8 years</strong> or as stipulated in Chapter II of APH.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5 shrink-0">info</span>
+<span>Premature closure or unilateral encashment will result in immediate intake freeze.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-surface-container">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold" href="#">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Download Chapter II Guidelines (PDF)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Compliance / Helpdesk Banner -->
+<div class="mt-8 mb-4 p-4 rounded-xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">support_agent</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Need assistance with your FDR lodgment or renewal? Check the <strong class="text-on-surface">AICTE APH Chapter II Guidelines</strong> or contact <strong class="text-on-surface">RO Central Bhopal Helpdesk</strong> (<a class="text-primary hover:underline font-semibold" href="mailto:ro.bhopal@aicte-india.org">ro.bhopal@aicte-india.org</a>).
+      </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="text-outline font-label-sm text-label-sm">Toll Free: 1800-11-3001</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+        Raise Ticket
+      </button>
+</div>
+</div>
+</div></main></div></body></html>

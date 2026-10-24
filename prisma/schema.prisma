@@ -1,0 +1,197 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String       @id @default(cuid())
+  name          String
+  email         String       @unique
+  passwordHash  String
+  role          String       // ADMIN | SENIOR_ADMIN | INSTITUTION
+  institutionId String?
+  institution   Institution? @relation(fields: [institutionId], references: [id])
+  createdAt     DateTime     @default(now())
+  auditLogs     AuditLog[]
+  remarks       Remark[]
+}
+
+model Institution {
+  id              String   @id @default(cuid())
+  aicteId         String   @unique // AICTE Permanent ID e.g. 1-12345678
+  name            String
+  state           String
+  city            String
+  region          String   // Central, Western, Southern, Northern, Eastern
+  type            String   // Engineering | Management | Pharmacy | Polytechnic | Architecture
+  nodalOfficer    String
+  email           String
+  phone           String?
+  requiredDeposit Float    @default(0) // expected security deposit (INR)
+  createdAt       DateTime @default(now())
+  users           User[]
+  fdrs            FDR[]
+}
+
+model FDR {
+  id                 String    @id @default(cuid())
+  refNo              String    // FDR number
+  institutionId      String
+  institution        Institution @relation(fields: [institutionId], references: [id])
+  bankName           String
+  branch             String
+  amount             Float
+  issueDate          DateTime
+  maturityDate       DateTime
+  purpose            String    @default("Approval Security Deposit")
+  academicYear       String    @default("2026-27")
+
+  verificationStatus String    @default("PENDING") // PENDING | UNDER_REVIEW | VERIFIED | DISCREPANCY
+  discrepancyReason  String?
+  verifiedById       String?
+  verifiedAt         DateTime?
+
+  renewalOfId        String?   @unique // new FDR points to the old one
+  renewalOf          FDR?      @relation("RenewalChain", fields: [renewalOfId], references: [id])
+  renewedBy          FDR?      @relation("RenewalChain")
+  renewedAt          DateTime?
+
+  releaseRequested   Boolean   @default(false)
+  releasedAt         DateTime?
+
+  submittedAt        DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  documents          FDRDocument[]
+  flags              DiscrepancyFlag[]
+  bankChecks         BankVerification[]
+  alerts             Alert[]
+  remarks            Remark[]
+  releaseRequests    ReleaseRequest[]
+
+  @@unique([bankName, refNo])
+  @@index([institutionId])
+  @@index([maturityDate])
+  @@index([verificationStatus])
+}
+
+model FDRDocument {
+  id           String   @id @default(cuid())
+  fdrId        String
+  fdr          FDR      @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  kind         String   @default("FDR_COPY") // FDR_COPY | BANK_CONFIRMATION | RELEASE_SUPPORT | RENEWAL
+  fileName     String
+  storedName   String   // uuid.enc in local filesystem
+  mimeType     String
+  sizeBytes    Int
+  fileHash     String   // sha256 of original PDF
+  version      Int      @default(1)
+  uploadedById String
+  uploadedAt   DateTime @default(now())
+
+  @@index([fileHash])
+}
+
+model BankVerification {
+  id            String   @id @default(cuid())
+  fdrId         String
+  fdr           FDR      @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  status        String   // MATCH | MISMATCH | UNAVAILABLE
+  source        String   @default("MOCK_BANK_API")
+  confirmedJson String?  // confirmed fields json
+  diffsJson     String?  // list of mismatching fields json
+  checkedById   String
+  checkedAt     DateTime @default(now())
+}
+
+model MockBankRecord {
+  id           String   @id @default(cuid())
+  bankName     String
+  refNo        String
+  amount       Float
+  issueDate    DateTime
+  maturityDate DateTime
+  holderName   String
+
+  @@unique([bankName, refNo])
+}
+
+model DiscrepancyFlag {
+  id        String   @id @default(cuid())
+  fdrId     String
+  fdr       FDR      @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  code      String   // see TRD §4.5
+  severity  String   // LOW | MEDIUM | HIGH
+  message   String
+  evidence  String?
+  resolved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Alert {
+  id            String   @id @default(cuid())
+  fdrId         String?
+  fdr           FDR?     @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  institutionId String?
+  type          String   // EXPIRING | OVERDUE | PENDING_STALE | DISCREPANCY_UNRESOLVED | ESCALATION | RELEASE_UPDATE
+  threshold     Int      @default(0) // days (90/60/30/15/7) or 0
+  severity      String   // INFO | WARNING | HIGH | CRITICAL
+  audience      String   // ADMIN | SENIOR_ADMIN | INSTITUTION
+  title         String
+  message       String
+  isRead        Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  @@unique([fdrId, type, threshold, audience])
+}
+
+model AlertRule {
+  id                String  @id @default(cuid())
+  type              String  @unique
+  thresholdsJson    String  // e.g. [90,60,30,15,7]
+  escalateAfterDays Int     @default(7)
+  enabled           Boolean @default(true)
+}
+
+model ReleaseRequest {
+  id              String    @id @default(cuid())
+  fdrId           String
+  fdr             FDR       @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  requestedById   String
+  reason          String
+  remarks         String?
+  status          String    @default("REQUESTED") // REQUESTED | UNDER_SCRUTINY | APPROVED | REJECTED | RELEASED
+  decisionById    String?
+  decisionRemarks String?
+  releaseRef      String?
+  requestedAt     DateTime  @default(now())
+  decidedAt       DateTime?
+  releasedAt      DateTime?
+}
+
+model Remark {
+  id        String   @id @default(cuid())
+  fdrId     String
+  fdr       FDR      @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  text      String
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        Int      @id @default(autoincrement())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id])
+  action    String   // FDR_SUBMITTED | FDR_VERIFIED | DOCUMENT_VIEWED | etc.
+  entity    String   // FDR | RELEASE | USER | ALERT ...
+  entityId  String
+  payload   String?  // JSON before/after
+  prevHash  String
+  hash      String
+  createdAt DateTime @default(now())
+}

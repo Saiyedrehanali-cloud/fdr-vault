@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#a73a00","surface-container-highest":"#cce7f4","background":"#f3faff","on-tertiary-container":"#78e6ed","on-error":"#ffffff","surface-tint":"#056877","on-primary":"#ffffff","tertiary":"#004d51","on-secondary-fixed":"#370e00","on-background":"#031e28","primary-fixed-dim":"#87d2e3","outline-variant":"#bec8cb","secondary-fixed-dim":"#ffb599","inverse-surface":"#1a343e","tertiary-container":"#00676c","surface-container-lowest":"#ffffff","on-secondary-container":"#571a00","secondary-container":"#fc6620","surface-variant":"#cce7f4","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#004f53","on-surface-variant":"#3f484b","on-primary-fixed-variant":"#004e5a","secondary-fixed":"#ffdbce","on-secondary-fixed-variant":"#7f2b00","surface-bright":"#f3faff","on-primary-fixed":"#001f25","on-error-container":"#93000a","on-surface":"#031e28","outline":"#6f797b","on-secondary":"#ffffff","error-container":"#ffdad6","surface-container":"#d9f2ff","surface-container-high":"#d2ecfa","surface-dim":"#c4deec","inverse-on-surface":"#dff4ff","tertiary-fixed":"#86f3fb","primary":"#004c58","on-primary-container":"#96e1f2","inverse-primary":"#87d2e3","surface":"#f3faff","error":"#ba1a1a","tertiary-fixed-dim":"#68d7de","primary-fixed":"#a4eeff","surface-container-low":"#e6f6ff","on-tertiary-fixed":"#002022","primary-container":"#006675"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-sm":"1rem","space-lg":"1.5rem","margin":"2rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xl":"2rem","margin-desktop":"2.5rem","space-md":"1rem","gutter":"1.5rem","gutter-lg":"2rem","space-xs":"0.5rem"},fontFamily:{"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-hero":["DM Serif Display"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["DM Serif Display"],"headline-md":["Plus Jakarta Sans"],"currency-stat":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"currency-stat":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[4px_0_24px_-4px_rgba(0,102,117,0.18)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center justify-between border-b border-white/10"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-primary-fixed shadow-inner"><span class="font-headline-sm text-headline-sm font-bold">₹</span></div><div class="flex flex-col"><span class="font-display-hero-mobile text-headline-sm leading-none text-white tracking-tight">FDR Vault</span><span class="font-label-sm text-[10px] text-primary-fixed-dim uppercase tracking-wider mt-0.5">Governance</span></div></div><span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed text-label-sm font-label-sm font-bold tracking-widest border border-secondary-container/30">AICTE</span></div><nav class="flex-1 px-3 py-space-md space-y-1" data-active-classes="bg-white/15 text-white font-semibold pl-3 border-l-[3px] border-[#FF9D2D] shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="dashboard" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="institutions" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">account_balance</span><span class="font-label-lg text-label-lg">Institutions</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="all-fdrs" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">receipt_long</span><span class="font-label-lg text-label-lg">All FDRs</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="verification" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">verified_user</span><span class="font-label-lg text-label-lg">Verification</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-white font-label-sm text-[11px] font-bold shadow-sm">9</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="release-requests" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">assignment_return</span><span class="font-label-lg text-label-lg">Release Requests</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="alerts" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">notifications_active</span><span class="font-label-lg text-label-lg">Alerts</span></div><span class="px-2 py-0.5 rounded-full bg-secondary text-white font-label-sm text-[11px] font-bold shadow-sm">5</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="reports" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">bar_chart</span><span class="font-label-lg text-label-lg">Reports</span></div></a><a aria-current="page" class="flex items-center justify-between px-3 py-2.5 rounded-lg transition-all group bg-white/15 text-white font-semibold pl-3 border-l-[3px] border-[#FF9D2D] shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]" data-path="audit-trail" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-secondary-fixed fill-1 scale-105" style="font-variation-settings: 'FILL' 1;">history_edu</span><span class="font-label-lg text-label-lg">Audit Trail</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-primary-fixed-dim hover:bg-white/10 hover:text-white transition-all group" data-path="settings" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">settings</span><span class="font-label-lg text-label-lg">Settings</span></div></a></nav></div><div class="relative overflow-hidden p-space-md border-t border-white/10 bg-gradient-to-t from-tertiary-container to-transparent"><div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-secondary-container/20 blur-xl pointer-events-none"></div><div class="relative flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>v2.4 Production Node</span><span class="material-symbols-outlined text-[16px] text-white/50">dns</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 px-space-xl flex items-center justify-between gap-gutter"><div class="flex items-center flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface rounded-xl border border-outline-variant/50 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search FDR No., Institute code, Bank..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="px-3 py-1 rounded-full bg-surface-container text-primary-container border border-surface-variant font-label-md text-label-md font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">shield_person</span><span>AICTE Admin</span></div><div class="flex items-center gap-3 pl-2"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-fixed ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Dr. S. K. Murthy</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-none">Director of Finance</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface p-space-xl"><div class="flex flex-col w-full space-y-6">
+<!-- Breadcrumbs & Meta Bar -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Security Deposits</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Immutable Audit Ledger</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="tracking-wide">Block Height: <strong class="font-bold">#1,284</strong> · Genesis: 01 Apr 2024</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">hub</span>
+<span>Node: Del-Central-01</span>
+</div>
+</div>
+</div>
+<!-- Page Title & Operational Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-1">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex flex-wrap items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Cryptographic Audit Trail &amp; Event Ledger</h1>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Sovereign SHA-256 Merkle Chain Active</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Append-only, tamper-evident cryptographic log recording all administrative actions, institutional lodgments, CBS sync timestamps, and release operations governed under AICTE Approval Process Handbook (APH).
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">calendar_today</span>
+<span>Last 30 Days · Apr 10 - May 10, 2025</span>
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container hover:text-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Log (CSV/JSON)</span>
+</button>
+</div>
+</div>
+<!-- State Banners: Primary Chain Intact & Secondary Simulation -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-4">
+<!-- Primary State: Green Verified Banner (Span 7) -->
+<div class="xl:col-span-7 bg-surface-container-low rounded-2xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-tertiary-fixed/30 blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-4 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Verification Complete</h2>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-tertiary-container font-label-sm text-label-sm font-bold shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                  Chain intact · 1,284 records verified
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                All SHA-256 block hashes verified against sovereign AICTE state root anchor.
+              </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-xl p-3 flex flex-wrap items-center justify-between gap-3 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">fingerprint</span>
+<span class="text-on-surface">Merkle State Root:</span>
+<code class="font-mono bg-surface-container px-2 py-0.5 rounded text-primary text-[12px] font-semibold">7f8a9d21cb5e3308a04df8217bb68924b21</code>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>Last checked: Today, 11:42 AM by <strong>Dr. S. K. Murthy</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">lock_reset</span>
+<span>Zero parity discrepancies across 6 regional nodes</span>
+</div>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-tertiary-container transition-all active:scale-[0.98]" id="verifyChainBtn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="verifyIcon">sync</span>
+<span id="verifyText">Verify Chain Integrity</span>
+</button>
+</div>
+</div>
+<!-- Secondary State: Burnt Orange Tamper Detection Simulation (Span 5) -->
+<div class="xl:col-span-5 bg-secondary-fixed/30 rounded-2xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -bottom-8 -right-8 w-32 h-32 rounded-full bg-secondary-container/20 blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span>Secondary State Simulation</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] font-bold tracking-widest uppercase">High Severity</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-secondary-fixed font-bold leading-tight">
+          Tampering detected at record #412
+        </h3>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-1.5">
+          Hash mismatch in previous block pointer for <strong class="text-secondary">FDR-2022-7714</strong>. Computed SHA-256 does not match signed sovereign root signature.
+        </p>
+<div class="mt-3 p-2.5 rounded-xl bg-surface-container-lowest/90 font-mono text-body-sm space-y-1">
+<div class="flex items-center justify-between text-[11px] text-secondary">
+<span>Expected: <code>0x4a12...9e07</code></span>
+<span>Encountered: <code class="line-through text-error">0x9b33...11cf</code></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-3 mt-2">
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm hover:bg-on-secondary-fixed-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">troubleshoot</span>
+<span>Investigate Node Logs</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-bold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>View Quarantine Block</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric Pills & Filter Hub -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm relative overflow-hidden">
+<div class="h-1 w-full bg-tertiary-container absolute top-0 left-0"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Logged Events</span>
+<span class="material-symbols-outlined text-primary text-[20px]">dataset</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-on-surface">1,284</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">+18 today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Continuous ledger since Apr 2024</p>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm relative overflow-hidden">
+<div class="h-1 w-full bg-primary absolute top-0 left-0"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Administrative Actions</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">admin_panel_settings</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-on-surface">342</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">26.6% of ledger</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Approvals, NOCs &amp; overrides</p>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm relative overflow-hidden">
+<div class="h-1 w-full bg-surface-tint absolute top-0 left-0"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CBS &amp; Core Banking Sync</span>
+<span class="material-symbols-outlined text-surface-tint text-[20px]">sync_alt</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-on-surface">789</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">100% matched</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated SFTP daemon pings</p>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm relative overflow-hidden">
+<div class="h-1 w-full bg-secondary absolute top-0 left-0"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Security Flags &amp; Holds</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">fmd_bad</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-currency-stat text-currency-stat text-secondary">12</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">3 unresolved</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Under forensic compliance check</p>
+</div>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+<!-- Search Field -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface rounded-xl text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-low transition-all" id="auditSearchInput" placeholder="Search by hash (0x...), actor email, FDR ref, or action tag..." type="text"/>
+</div>
+<!-- Quick Filter Category Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm" type="button">
+        All Events (1,284)
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface hover:bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+        Administrative (342)
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface hover:bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+        Depository &amp; CBS (789)
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface hover:bg-surface-container text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+        Security &amp; NOC (141)
+      </button>
+<div class="h-6 w-px bg-outline-variant/60 mx-1"></div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Role Filter</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Audit Trail Table Section -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<div class="p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-surface-container-low/40">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Immutable Ledger Records</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Synchronized across sovereign depository nodes in Delhi, Mumbai, and Hyderabad</p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+          Live Stream
+        </span>
+<span class="text-outline">|</span>
+<span>Auto-refreshing (15s)</span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-4 font-bold">Time (UTC +5:30)</th>
+<th class="py-3.5 px-4 font-bold">Actor / Identity</th>
+<th class="py-3.5 px-4 font-bold">Action Event</th>
+<th class="py-3.5 px-4 font-bold">Target Entity</th>
+<th class="py-3.5 px-4 font-bold">Merkle Proof Hash</th>
+<th class="py-3.5 px-4 font-bold text-center">Block Height</th>
+<th class="py-3.5 px-4 font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">10 May 2025, 11:28 AM</div>
+<div class="font-body-sm text-body-sm text-outline">14 minutes ago</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold text-[11px]">
+                  SM
+                </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Dr. S. K. Murthy</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Director Finance</span>
+<span>·</span>
+<span class="font-mono text-[11px]">10.14.2.89</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+                APPROVED_RELEASE_NOC
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2019-3810
+              </div>
+<div class="font-body-sm text-body-sm text-outline">RV College of Engg (₹35,00,000)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x8f3c...b921</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,284
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="View cryptographic receipt" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">10 May 2025, 11:15 AM</div>
+<div class="font-body-sm text-body-sm text-outline">27 minutes ago</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container text-surface-tint flex items-center justify-center font-bold text-[11px]">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">System CBS Daemon</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>PNB Core Gateway</span>
+<span>·</span>
+<span class="font-mono text-[11px]">192.168.10.42</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">sync_saved_locally</span>
+                CBS_SYNC_RECONCILED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2024-5120
+              </div>
+<div class="font-body-sm text-body-sm text-outline">Punjab National Bank Batch #41</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x4a12...9e07</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,283
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="View cryptographic receipt" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Security Flag in Burnt Orange -->
+<tr class="bg-secondary-fixed/15 hover:bg-secondary-fixed/25 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-secondary font-bold">10 May 2025, 10:48 AM</div>
+<div class="font-body-sm text-body-sm text-on-secondary-fixed-variant">54 minutes ago</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[11px]">
+                  RS
+                </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Prof. R. K. Sen</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Central RO Bhopal</span>
+<span>·</span>
+<span class="font-mono text-[11px]">10.28.1.15</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                DISCREPANCY_FLAGGED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-secondary hover:underline cursor-pointer">
+                FDR-2022-7714
+              </div>
+<div class="font-body-sm text-body-sm text-outline">COEP Pune (Maturity Premature)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold">
+<span>0x7d89...11ac</span>
+<button class="text-secondary hover:text-on-secondary-fixed" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                #1,282
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-secondary-fixed text-secondary transition-colors" title="Investigate discrepancy block" type="button">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">10 May 2025, 09:30 AM</div>
+<div class="font-body-sm text-body-sm text-outline">2h 12m ago</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[11px]">
+                  IN
+                </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Institution Admin</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Manipal Inst. of Tech</span>
+<span>·</span>
+<span class="font-mono text-[11px]">172.24.8.102</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">file_upload</span>
+                LODGMENT_SUBMITTED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2025-9901
+              </div>
+<div class="font-body-sm text-body-sm text-outline">State Bank of India (₹50,00,000)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x3b52...cc48</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,281
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">10 May 2025, 08:00 AM</div>
+<div class="font-body-sm text-body-sm text-outline">3h 42m ago</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-[11px]">
+<span class="material-symbols-outlined text-[15px]">security</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Sovereign Sentinel Bot</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Merkle Verifier Node 01</span>
+<span>·</span>
+<span class="font-mono text-[11px]">Internal RPC</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">rule</span>
+                CHAIN_INTEGRITY_VERIFIED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-on-surface">
+                AICTE-LEDGER-ROOT
+              </div>
+<div class="font-body-sm text-body-sm text-outline">Daily Epoch Anchor Check</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x11ee...fa90</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,280
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">09 May 2025, 05:40 PM</div>
+<div class="font-body-sm text-body-sm text-outline">Yesterday</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-[11px]">
+                  KB
+                </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Dr. Kavita Bansal</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Advisor-I AICTE</span>
+<span>·</span>
+<span class="font-mono text-[11px]">10.14.2.10</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">draw</span>
+                ENDORSEMENT_SIGNATURE_UPLOADED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2023-8812
+              </div>
+<div class="font-body-sm text-body-sm text-outline">BITS Pilani Off-Campus (Canara)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x5f99...871a</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,279
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">09 May 2025, 03:12 PM</div>
+<div class="font-body-sm text-body-sm text-outline">Yesterday</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container text-surface-tint flex items-center justify-center font-bold text-[11px]">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Bank of Baroda Gateway</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>SFTP Scheduled Sync</span>
+<span>·</span>
+<span class="font-mono text-[11px]">192.168.10.99</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">published_with_changes</span>
+                CBS_LIEN_CONFIRMED
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2025-1044
+              </div>
+<div class="font-body-sm text-body-sm text-outline">Heritage Inst. of Tech (₹1,00,00,000)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x2d04...33c9</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,278
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md text-on-surface font-bold">09 May 2025, 01:20 PM</div>
+<div class="font-body-sm text-body-sm text-outline">Yesterday</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold text-[11px]">
+                  SM
+                </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Dr. S. K. Murthy</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span>Director Finance</span>
+<span>·</span>
+<span class="font-mono text-[11px]">10.14.2.89</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                ENFORCE_ENCUMBRANCE_LIEN
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="font-label-md text-label-md font-bold text-primary hover:underline cursor-pointer">
+                FDR-2021-4190
+              </div>
+<div class="font-body-sm text-body-sm text-outline">Noida Inst. of Engg (APH 2024 clause 4.2)</div>
+</td>
+<td class="py-4 px-4 font-mono text-[12px] whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface text-primary">
+<span>0x9c41...ee12</span>
+<button class="text-outline hover:text-on-surface" title="Copy SHA-256 Hash" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                #1,277
+              </span>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Pagination -->
+<div class="p-space-md border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm">
+<span>Showing <strong class="text-on-surface">1–8</strong> of <strong class="text-on-surface">1,284</strong> immutable audit records</span>
+<span class="text-outline">·</span>
+<div class="flex items-center gap-1">
+<span>Rows per page:</span>
+<select class="bg-surface rounded-lg px-2 py-1 text-on-surface font-semibold focus:outline-none">
+<option>8</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-xl text-outline hover:bg-surface-container hover:text-on-surface disabled:opacity-30 disabled:pointer-events-none transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-xl hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-xl hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">3</button>
+<span class="px-1 text-outline font-label-md">...</span>
+<button class="w-8 h-8 rounded-xl hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">129</button>
+<button class="p-2 rounded-xl text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Statutory Legal & Cryptographic Compliance Guarantee Card -->
+<div class="bg-surface-container-low/70 rounded-2xl p-space-lg shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+<span>Statutory Audit &amp; Legal Admissibility Statement</span>
+<span class="text-tertiary-container material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+          The AICTE Sovereign Immutable Ledger is compliant with <strong>Information Technology Act, 2000 Section 65B</strong> (electronic evidence admissibility) and the <strong>Digital India Trust Framework</strong>. Every state change is sealed with timestamped SHA-256 block hashing and distributed across 3 distinct sovereign nodes. Records cannot be retroactively altered, overwritten, or pruned under any administrative privilege.
+        </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-xs hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Certificate of Admissibility</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive simulation for Verify Chain Integrity button
+  const verifyBtn = document.getElementById('verifyChainBtn');
+  const verifyIcon = document.getElementById('verifyIcon');
+  const verifyText = document.getElementById('verifyText');
+
+  if (verifyBtn && verifyIcon && verifyText) {
+    verifyBtn.addEventListener('click', () => {
+      verifyIcon.classList.add('animate-spin');
+      verifyText.textContent = 'Calculating Merkle Root...';
+      verifyBtn.disabled = true;
+
+      setTimeout(() => {
+        verifyIcon.classList.remove('animate-spin');
+        verifyIcon.textContent = 'check_circle';
+        verifyText.textContent = 'Integrity Verified (0.42s)';
+        verifyBtn.classList.remove('bg-primary');
+        verifyBtn.classList.add('bg-tertiary-container');
+
+        setTimeout(() => {
+          verifyIcon.textContent = 'sync';
+          verifyText.textContent = 'Verify Chain Integrity';
+          verifyBtn.classList.remove('bg-tertiary-container');
+          verifyBtn.classList.add('bg-primary');
+          verifyBtn.disabled = false;
+        }, 3000);
+      }, 1200);
+    });
+  }
+</script></main></div></body></html>
