@@ -7,7 +7,7 @@ import { storeEncryptedDocument } from "@/lib/services/document";
 import { runDiscrepancyRules } from "@/lib/services/verification";
 import { computeLifecycle, computeDaysToMaturity } from "@/lib/services/fdr";
 
-export const fdrCreateSchema = z
+const fdrCreateSchema = z
   .object({
     refNo: z.string().min(3).max(50),
     bankName: z.string().min(2),
@@ -23,6 +23,8 @@ export const fdrCreateSchema = z
     message: "Maturity date must be after issue date",
     path: ["maturityDate"],
   });
+
+export const dynamic = "force-dynamic";
 
 // GET /api/fdrs - List FDRs with filters
 export async function GET(req: NextRequest) {

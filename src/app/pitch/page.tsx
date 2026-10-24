@@ -10,6 +10,7 @@ import {
   FileText,
   AlertTriangle,
   Lock,
+  Clock,
   History,
   CheckCircle2,
   ExternalLink,
@@ -50,7 +51,7 @@ export default function PitchDeckPage() {
           </div>
           <div>
             <span className="font-heading font-bold text-sm tracking-wide text-white">
-              FDR Vault
+              FinMatrix
             </span>
             <span className="text-[11px] text-teal-400/80 ml-2 font-mono">
               SIH 2026 · PS SIH26265
@@ -103,7 +104,7 @@ export default function PitchDeckPage() {
 
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-6xl font-extrabold font-heading text-white tracking-tight">
-                FDR Vault
+                FinMatrix
               </h1>
               <p className="text-xl sm:text-2xl font-light text-teal-200">
                 Streamline of Security Deposit &amp; Fixed Deposit Receipt Management
@@ -191,7 +192,7 @@ export default function PitchDeckPage() {
                 Proposed Solution
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white">
-                FDR Vault: 4 Architectural Pillars
+                FinMatrix: 4 Architectural Pillars
               </h2>
               <p className="text-sm text-slate-400">
                 A purpose-built, high-assurance regulatory clearinghouse engineered for AICTE and affiliated institutions.
@@ -268,7 +269,7 @@ export default function PitchDeckPage() {
                   <tr>
                     <th className="py-2.5 px-3">#</th>
                     <th className="py-2.5 px-3">PS Capability Stated</th>
-                    <th className="py-2.5 px-3">FDR Vault Implementation</th>
+                    <th className="py-2.5 px-3">FinMatrix Implementation</th>
                     <th className="py-2.5 px-3 text-right">Status</th>
                   </tr>
                 </thead>
@@ -347,7 +348,7 @@ export default function PitchDeckPage() {
                 Innovation &amp; Differentiators
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white">
-                What Makes FDR Vault Stand Out
+                What Makes FinMatrix Stand Out
               </h2>
             </div>
 
@@ -356,7 +357,7 @@ export default function PitchDeckPage() {
                 <span className="text-xs font-mono font-bold text-[#FF9D2D]">INNOVATION #1</span>
                 <h3 className="text-base font-bold text-white">Dual-Source Truth Presentation</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Unlike traditional systems that blindly trust uploaded scans, FDR Vault treats institution submissions as unverified claims until cross-examined against core banking systems.
+                  Unlike traditional systems that blindly trust uploaded scans, FinMatrix treats institution submissions as unverified claims until cross-examined against core banking systems.
                 </p>
               </div>
 

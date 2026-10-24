@@ -64,7 +64,7 @@ export function PortalLayout({ children }: { children: React.ReactNode }) {
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="font-display text-lg font-bold text-[#006675]">
-                    FDR Vault
+                    FinMatrix
                   </span>
                   <span className="px-1.5 py-0.2 rounded-sm bg-[#00959C]/15 text-[#006675] text-[10px] font-bold uppercase tracking-wider">
                     Institution Portal
@@ -137,7 +137,7 @@ export function PortalLayout({ children }: { children: React.ReactNode }) {
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <span className="font-display text-lg font-bold text-[#006675]">
-                  FDR Vault Portal
+                  FinMatrix Portal
                 </span>
                 <button
                   type="button"

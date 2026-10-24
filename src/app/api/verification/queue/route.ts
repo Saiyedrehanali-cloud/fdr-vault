@@ -3,6 +3,8 @@ import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 import { differenceInDays } from "date-fns";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getSession();
@@ -60,6 +62,12 @@ export async function GET(req: NextRequest) {
       if (queueDays > 5) slaTier = "RED";
       else if (queueDays >= 2) slaTier = "YELLOW";
 
+      let source: "SUBMITTED" | "BANK_CONFIRMED" | "MISMATCH" = "SUBMITTED";
+      if (fdr.bankChecks && fdr.bankChecks.length > 0) {
+        if (fdr.bankChecks[0].status === "MISMATCH") source = "MISMATCH";
+        else if (fdr.bankChecks[0].status === "MATCH") source = "BANK_CONFIRMED";
+      }
+
       return {
         id: fdr.id,
         refNo: fdr.refNo,
@@ -70,7 +78,7 @@ export async function GET(req: NextRequest) {
         maturityDate: fdr.maturityDate.toISOString().split("T")[0],
         submittedAt: fdr.submittedAt.toISOString(),
         verificationStatus: fdr.verificationStatus,
-        source: fdr.source,
+        source,
         institution: fdr.institution,
         unresolvedFlagsCount: fdr.flags.length,
         flags: fdr.flags,

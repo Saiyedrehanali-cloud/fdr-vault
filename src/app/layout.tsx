@@ -6,7 +6,6 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
 });
 
 const dmSerif = DM_Serif_Display({
@@ -17,7 +16,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "FDR Vault — AICTE Security Deposit & FDR Management Portal",
+  title: "FinMatrix — AICTE Security Deposit & FDR Management Portal",
   description:
     "Centralized Fixed Deposit Receipt (FDR) and Security Deposit management portal for AICTE approved technical institutions. SIH 2026 PS SIH26265.",
 };

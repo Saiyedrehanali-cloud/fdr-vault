@@ -109,13 +109,6 @@ export async function verifyFDRWithBank(
       },
     });
 
-    // Update source badge to BANK_CONFIRMED
-    await db.fDR.update({
-      where: { id: fdr.id },
-      data: {
-        source: "BANK_CONFIRMED",
-      },
-    });
 
     // Resolve any previous BANK_MISMATCH flags
     await db.discrepancyFlag.updateMany({
@@ -175,11 +168,10 @@ export async function verifyFDRWithBank(
       },
     });
 
-    // Update FDR source to MISMATCH and verificationStatus to DISCREPANCY
+    // Update FDR verificationStatus to DISCREPANCY
     await db.fDR.update({
       where: { id: fdr.id },
       data: {
-        source: "MISMATCH",
         verificationStatus: "DISCREPANCY",
       },
     });

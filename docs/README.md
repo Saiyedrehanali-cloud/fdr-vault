@@ -1,4 +1,4 @@
-# FDR Vault — SIH26265 Documentation Pack
+# FinMatrix — SIH26265 Documentation Pack
 
 | File | Purpose |
 |---|---|

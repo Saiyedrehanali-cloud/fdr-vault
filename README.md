@@ -1,4 +1,4 @@
-# FDR Vault — Streamline of Security Deposit & FDR Portal
+# FinMatrix — Streamline of Security Deposit & FDR Portal
 > **Smart India Hackathon 2026** · Problem Statement: **SIH26265**  
 > **Theme:** Smart Automation · **Organization:** All India Council for Technical Education (AICTE), Ministry of Education  
 > **Tagline:** *Every deposit. Tracked. Verified. Secured.*
@@ -12,7 +12,7 @@ AICTE currently monitors thousands of Fixed Deposit Receipts (FDRs) pledged by t
 - **Verification Bottlenecks:** No instant cross-referencing between institutional claims and Core Banking System (CBS) records.
 - **Tampering & Audit Vulnerability:** Unprotected document uploads and non-verifiable change histories.
 
-**FDR Vault** transitions AICTE into an automated, tamper-evident, dual-source regulatory clearinghouse with automated 90-60-30-15-7 day countdown matrix alerts, encrypted document enclaves, scheduled commercial bank cross-checks, and an immutable HMAC-SHA256 audit chain.
+**FinMatrix** transitions AICTE into an automated, tamper-evident, dual-source regulatory clearinghouse with automated 90-60-30-15-7 day countdown matrix alerts, encrypted document enclaves, scheduled commercial bank cross-checks, and an immutable HMAC-SHA256 audit chain.
 
 ---
 

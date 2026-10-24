@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   Shield,
   IndianRupee,
@@ -129,7 +130,7 @@ export default function LoginPage() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display text-2xl font-bold tracking-tight text-white">
-                  FDR Vault
+                  FinMatrix
                 </span>
                 <span className="px-2 py-0.5 rounded-sm bg-[#FF9D2D] text-[#0F2A30] text-[10px] font-extrabold tracking-wider uppercase">
                   AICTE

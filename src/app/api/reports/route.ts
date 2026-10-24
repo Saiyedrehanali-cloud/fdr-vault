@@ -3,6 +3,8 @@ import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 import { computeLifecycle, computeDaysToMaturity } from "@/lib/services/fdr";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getSession();
@@ -154,7 +156,7 @@ export async function GET(req: NextRequest) {
             include: { institution: true },
           },
         },
-        orderBy: { createdAt: "desc" },
+        orderBy: { requestedAt: "desc" },
       });
 
       rows = releases.map((r) => ({
@@ -215,7 +217,7 @@ export async function GET(req: NextRequest) {
       return new NextResponse(csvContent, {
         headers: {
           "Content-Type": "text/csv; charset=utf-8",
-          "Content-Disposition": `attachment; filename="FDR-Vault-Report-${type}-${today.toISOString().split("T")[0]}.csv"`,
+          "Content-Disposition": `attachment; filename="FinMatrix-Report-${type}-${today.toISOString().split("T")[0]}.csv"`,
         },
       });
     }

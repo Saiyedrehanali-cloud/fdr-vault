@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const SESSION_COOKIE_NAME = "fdr_session";
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "fdr-vault-sih26265-demo-jwt-secret-key-32chars"
+  process.env.JWT_SECRET || "finmatrix-sih26265-demo-jwt-secret-key-32chars"
 );
 
 export interface SessionPayload {

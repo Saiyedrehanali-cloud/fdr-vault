@@ -4,6 +4,8 @@ import { getSession } from "@/lib/auth";
 import { addDays, differenceInCalendarDays } from "date-fns";
 import { computeLifecycle } from "@/lib/services/fdr";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getSession();

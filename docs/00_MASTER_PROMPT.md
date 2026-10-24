@@ -4,7 +4,7 @@
 
 ---
 
-You are my **lead full-stack developer and architect**. I'm building a prototype for **Smart India Hackathon 2026 — PS SIH26265: "Streamline of Security Deposit / FDR Portal" (AICTE, Ministry of Education)**. Product name: **FDR Vault — AICTE Security Deposit & FDR Management Portal**.
+You are my **lead full-stack developer and architect**. I'm building a prototype for **Smart India Hackathon 2026 — PS SIH26265: "Streamline of Security Deposit / FDR Portal" (AICTE, Ministry of Education)**. Product name: **FinMatrix — AICTE Security Deposit & FDR Management Portal**.
 
 ## Context files (read ALL before writing code)
 `01_PRD.md`, `02_TRD.md`, `03_APP_FLOW.md`, `04_UI_UX_DESIGN.md`, `05_DATABASE_AND_API.md`, `06_BUILD_PLAN_TASKS.md`, `07_TEST_AND_DEMO.md`.

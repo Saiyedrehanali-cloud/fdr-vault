@@ -87,7 +87,7 @@ export default {
 └────────┴──────────────────────────────────────────────────────┘
 ```
 ### Sidebar
-- Background `#006675`; logo block top (shield+rupee icon, "FDR Vault" in DM Serif, small "AICTE" tag).
+- Background `#006675`; logo block top (shield+rupee icon, "FinMatrix" in DM Serif, small "AICTE" tag).
 - Nav items (Lucide): `LayoutDashboard` Dashboard · `Building2` Institutions · `FileText` All FDRs · `ShieldCheck` Verification (badge count) · `Undo2` Release Requests · `BellRing` Alerts · `BarChart3` Reports · `ScrollText` Audit Trail · `Settings` Settings.
 - Item: white/80 text; hover `bg-white/10`; **active** = `bg-white/15` + 3px `#FF9D2D` left bar + white text.
 - Bottom: user chip + logout. Decorative: subtle wave-curve SVG at the very bottom (orange→teal bands, 8% opacity) echoing the palette image.
@@ -128,7 +128,7 @@ Card anatomy: white surface, 4px top border in accent color, icon in 40px tinted
 - Gridlines `#E2E8F0`, axis text `muted` 12px. Always provide legend + accessible labels.
 
 ## 8. Key Screens (wireframe notes)
-1. **Login** — split screen: left = wave-gradient hero (orange→teal bands as CSS/SVG), "FDR Vault" in DM Serif, tagline "Every deposit. Tracked. Verified. Secured."; right = card with role toggle (Admin / Institution), email, password, quick "Demo login" chips.
+1. **Login** — split screen: left = wave-gradient hero (orange→teal bands as CSS/SVG), "FinMatrix" in DM Serif, tagline "Every deposit. Tracked. Verified. Secured."; right = card with role toggle (Admin / Institution), email, password, quick "Demo login" chips.
 2. **Admin Dashboard** — as §4.
 3. **FDR List** — filters bar (Institution, Bank, Verification status, Lifecycle, Maturity range, Amount range), table, export CSV.
 4. **FDR Detail** — header (Ref No., institution, status badges); left card "Instrument details" with source badges; right "Document viewer" (PDF iframe); below tabs: *Timeline · Flags · Bank Verification · Remarks · Renewal chain · Audit*. Sticky action bar for admin: **Verify with Bank · Mark Verified · Flag Discrepancy**.
@@ -158,4 +158,4 @@ Contrast: white on `#006675` ✓ AA; white on `#EB5A11` ✓ for large/bold text 
 ≥1024: fixed sidebar · 768–1023: icon-only sidebar · <768: drawer + stacked cards, tables become card lists.
 
 ## 13. Branding
-Name **FDR Vault** · icon: shield with ₹ · tagline "Every deposit. Tracked. Verified. Secured." · Include "Prototype for SIH 2026 · PS SIH26265" in footer of login.
+Name **FinMatrix** · icon: shield with ₹ · tagline "Every deposit. Tracked. Verified. Secured." · Include "Prototype for SIH 2026 · PS SIH26265" in footer of login.

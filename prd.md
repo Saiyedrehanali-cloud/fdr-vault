@@ -1,8 +1,8 @@
-# FDR Vault — Product Requirements & Architectural Context
+# FinMatrix — Product Requirements & Architectural Context
 
 > **Smart India Hackathon 2026** · Problem Statement: **SIH26265**  
 > **Theme:** Smart Automation / AICTE  
-> **Product Name:** FDR Vault — AICTE Security Deposit & Fixed Deposit Receipt Management Portal  
+> **Product Name:** FinMatrix — AICTE Security Deposit & Fixed Deposit Receipt Management Portal  
 > **Detailed Docs Reference:** All comprehensive design and planning documents are maintained in [`/docs`](file:///c:/MY%20LAPTOP/My%20Project/FinMatrix/docs).
 
 ---
@@ -15,7 +15,7 @@ Technical educational institutions approved by AICTE are required to maintain Fi
 3. **Slow & Non-Standard Verification:** Time-consuming manual scrutiny with no real-time bank cross-verification.
 4. **Opaque Release/Refund Processes:** No status tracking or conditional scrutiny when colleges request deposit releases.
 
-**FDR Vault** solves this with a centralized, automated, and tamper-evident lifecycle platform tracking deposits from submission to renewal or release.
+**FinMatrix** solves this with a centralized, automated, and tamper-evident lifecycle platform tracking deposits from submission to renewal or release.
 
 ---
 

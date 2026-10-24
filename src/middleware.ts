@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "fdr-vault-sih26265-demo-jwt-secret-key-32chars"
+  process.env.JWT_SECRET || "finmatrix-sih26265-demo-jwt-secret-key-32chars"
 );
 
 export async function middleware(req: NextRequest) {

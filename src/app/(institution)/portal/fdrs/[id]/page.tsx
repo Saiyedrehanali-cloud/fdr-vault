@@ -455,7 +455,7 @@ export default function PortalFdrDetailPage() {
                     Submitted by Institution
                   </h4>
                   <p className="text-[11px] text-[#5B7480]">
-                    Date: {formatDate(fdr.submittedAt)} · Instrument registered on FDR Vault.
+                    Date: {formatDate(fdr.submittedAt)} · Instrument registered on FinMatrix.
                   </p>
                 </div>
 

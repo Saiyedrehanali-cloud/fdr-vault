@@ -1,7 +1,7 @@
 # 08 — SIH PITCH & SUBMISSION NOTES (use for PPT / idea submission)
 
 ## One-liner
-**FDR Vault** — a secure, centralized portal that tracks every AICTE security deposit/FDR from submission to release, with dual-source verification, automated expiry alerts and a tamper-evident audit trail.
+**FinMatrix** — a secure, centralized portal that tracks every AICTE security deposit/FDR from submission to release, with dual-source verification, automated expiry alerts and a tamper-evident audit trail.
 
 ## Problem → Solution → Impact
 | Problem | Our answer |

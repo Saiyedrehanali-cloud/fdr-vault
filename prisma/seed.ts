@@ -8,7 +8,7 @@ import { addDays, subDays } from "date-fns";
 const db = new PrismaClient();
 
 const AUDIT_SECRET =
-  process.env.AUDIT_KEY || "fdr-vault-tamper-evident-audit-hmac-key-2026";
+  process.env.AUDIT_KEY || "finmatrix-tamper-evident-audit-hmac-key-2026";
 let lastAuditHash =
   "0000000000000000000000000000000000000000000000000000000000000000";
 
@@ -127,7 +127,7 @@ const BANKS = [
 ];
 
 async function main() {
-  console.log("🚀 Starting FDR Vault Seed Execution...");
+  console.log("🚀 Starting FinMatrix Seed Execution...");
 
   // Clear existing records
   await db.auditLog.deleteMany();
@@ -255,7 +255,7 @@ async function main() {
     "SYSTEM_INIT",
     "SYSTEM",
     "ROOT",
-    { description: "FDR Vault Database Initialized for AICTE Regulation Bureau" }
+    { description: "FinMatrix Database Initialized for AICTE Regulation Bureau" }
   );
 
   // 4. Seed ~90 FDRs matching exact state distribution from 07_TEST_AND_DEMO.md

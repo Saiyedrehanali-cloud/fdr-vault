@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getSession();
@@ -41,26 +43,39 @@ export async function GET(req: NextRequest) {
             },
           },
         },
-        requestedBy: {
-          select: { name: true, email: true },
-        },
-        decisionBy: {
-          select: { name: true, role: true },
-        },
       },
-      orderBy: { createdAt: "desc" },
+      orderBy: { requestedAt: "desc" },
     });
 
+    const userIds = Array.from(
+      new Set(
+        items.flatMap((i) => [i.requestedById, i.decisionById].filter(Boolean) as string[])
+      )
+    );
+    const users = userIds.length > 0
+      ? await db.user.findMany({
+          where: { id: { in: userIds } },
+          select: { id: true, name: true, email: true, role: true },
+        })
+      : [];
+    const userMap = new Map(users.map((u) => [u.id, u]));
+
+    const enrichedItems = items.map((i) => ({
+      ...i,
+      requestedBy: userMap.get(i.requestedById) || null,
+      decisionBy: i.decisionById ? userMap.get(i.decisionById) || null : null,
+    }));
+
     const stats = {
-      total: items.length,
-      requested: items.filter((i) => i.status === "REQUESTED").length,
-      underScrutiny: items.filter((i) => i.status === "UNDER_SCRUTINY").length,
-      approved: items.filter((i) => i.status === "APPROVED").length,
-      released: items.filter((i) => i.status === "RELEASED").length,
-      rejected: items.filter((i) => i.status === "REJECTED").length,
+      total: enrichedItems.length,
+      requested: enrichedItems.filter((i) => i.status === "REQUESTED").length,
+      underScrutiny: enrichedItems.filter((i) => i.status === "UNDER_SCRUTINY").length,
+      approved: enrichedItems.filter((i) => i.status === "APPROVED").length,
+      released: enrichedItems.filter((i) => i.status === "RELEASED").length,
+      rejected: enrichedItems.filter((i) => i.status === "REJECTED").length,
     };
 
-    return NextResponse.json({ ok: true, data: { items, stats } });
+    return NextResponse.json({ ok: true, data: { items: enrichedItems, stats } });
   } catch (error: any) {
     console.error("List releases error:", error);
     return NextResponse.json(

@@ -1,6 +1,6 @@
 # 01 — PRODUCT REQUIREMENTS DOCUMENT (PRD)
 
-**Product:** FDR Vault — Centralized Security Deposit / FDR Management Portal
+**Product:** FinMatrix — Centralized Security Deposit / FDR Management Portal
 **PS:** SIH26265 · Organization: AICTE · Category: Software · Theme: Smart Automation
 **Version:** 1.0 · **Owner:** Team Zeven · **Deadline:** 28 Oct 2026 (idea submission)
 

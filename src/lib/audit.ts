@@ -2,7 +2,7 @@ import crypto from "crypto";
 import { db } from "./db";
 
 const AUDIT_SECRET =
-  process.env.AUDIT_KEY || "fdr-vault-tamper-evident-audit-hmac-key-2026";
+  process.env.AUDIT_KEY || "finmatrix-tamper-evident-audit-hmac-key-2026";
 const GENESIS_HASH =
   "0000000000000000000000000000000000000000000000000000000000000000";
 

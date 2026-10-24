@@ -128,7 +128,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="font-display text-xl font-bold tracking-tight text-white leading-tight">
-                  FDR Vault
+                  FinMatrix
                 </span>
                 <span className="px-1.5 py-0.2 rounded-sm bg-[#FF9D2D] text-[#0F2A30] text-[10px] font-extrabold tracking-wider uppercase">
                   AICTE

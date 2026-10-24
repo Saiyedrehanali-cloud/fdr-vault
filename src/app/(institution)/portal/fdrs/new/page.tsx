@@ -34,7 +34,7 @@ const POPULAR_BANKS = [
   "Kotak Mahindra Bank",
 ];
 
-export default function SubmitFdrPage() {
+function SubmitFdrContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const renewId = searchParams.get("renew") || searchParams.get("renewalOf");
@@ -674,5 +674,13 @@ export default function SubmitFdrPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function SubmitFdrPage() {
+  return (
+    <React.Suspense fallback={<div className="p-8 text-center text-[#5B7480]">Loading submission wizard...</div>}>
+      <SubmitFdrContent />
+    </React.Suspense>
   );
 }
